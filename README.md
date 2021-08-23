@@ -1,22 +1,17 @@
-GifHub  
+# GifHub
+Phase 2 Project for Andres Gordillo and Samantha Laine
 
-Phase 2 Project 
-
-Porject overview
--A collection of various gifs, fetched from a external API. Displayed in app and made using react.
-
-Features
--Login feature
--Collection of gifs
--Sorting and Search
--Routing to different pages
--Adding user based gifs
+Project consists of creating a application that host a collection of gifs that users can interact with and add to. 
 
 
 
-External API Link
-----
+API = 
 
-Project by
--Samantha Laine
--Andres Gordillo
+Deliverables:
+
+- Ensure products appear on page
+
+
+
+Stretch Goals:
+
