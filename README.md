@@ -11,7 +11,7 @@ Features
 -Sorting and Search
 -Routing to different pages
 -Adding user based gifs
-
+--
 
 
 External API Link
