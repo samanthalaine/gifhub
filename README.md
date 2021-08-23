@@ -10,8 +10,16 @@ API =
 Deliverables:
 
 - Ensure products appear on page
+- Login feature
+- Search and sort
+- Adding your own gif
+- Routing to different pages, such as home and login
+- Make it persist on page
 
 
 
 Stretch Goals:
+
+- Make it styled using material ui.
+- Create a smooth user experience, no bugs.
 
