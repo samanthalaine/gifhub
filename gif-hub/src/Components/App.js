@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import MainContent from "./MainContent"
+import Header from './Header'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <MainContent gif={gif}/>
     </div>
   );
