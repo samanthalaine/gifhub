@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from "react"
 import MainContent from "./MainContent"
 import Header from './Header'
+
 import Login from "./Login";
 import ItemDetail from "./ItemDetail"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+
+import Search from "./Search"
+import UploadGifs from "./UploadGifs"
+
 
 function App() {
 
@@ -42,6 +47,10 @@ function App() {
           <ItemDetail gif={gif}/>
         </Route>
       </Switch>
+      <Search/>
+      <UploadGifs/>
+      
+
     </div>
   </Router>
   );
