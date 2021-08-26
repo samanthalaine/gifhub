@@ -2,8 +2,9 @@ import React from 'react'
 import GifTile from './GifTile'
 import { ImageList } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
-function MainContent({gif}) {
+function MainContent({gif, handleClick}) {
 
 
     const useStyles = makeStyles((theme) => ({
@@ -32,7 +33,9 @@ function MainContent({gif}) {
             <ImageList rowHeight="auto" className={classes.imageList}>
             {
 
-                gif.map((gif) => <GifTile key={gif.id} gif={gif} classes={classes}/>)
+                gif.map((gif) => 
+                
+                <GifTile key={gif.id} gif={gif}  classes={classes}/>)
 
             }
             </ImageList>

@@ -2,21 +2,23 @@ import React, {useEffect, useState} from "react"
 import MainContent from "./MainContent"
 import Header from './Header'
 import Login from "./Login";
+import ItemDetail from "./ItemDetail"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
 
+  
   const [gif, setGif] = useState([])
   useEffect(function effectFunction() {
     async function fetchGifs() {
-        const response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=xjRmS04E6Syed3yZKqVZZ301OmqO5rvL&limit=28&rating=r');
+        const response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=xjRmS04E6Syed3yZKqVZZ301OmqO5rvL&limit=35&rating=r');
         const json = await response.json();
         setGif(json.data);
     }
     fetchGifs();
 }, []);
 
-  console.log(gif)
+  // console.log(gif)
 //  const imageUrl= gif.data.image_url
 //Action item 1 - make sign up 
 //- backend handles logic
@@ -33,8 +35,11 @@ function App() {
       <Header/>
       <Switch>
         <Route path="/login" component={Login}/>
-        <Route path="/">
+        <Route path="/" exact>
           <MainContent gif={gif}/>
+        </Route>
+        <Route path="/:id">
+          <ItemDetail gif={gif}/>
         </Route>
       </Switch>
     </div>

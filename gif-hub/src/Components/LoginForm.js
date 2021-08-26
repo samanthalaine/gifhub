@@ -13,7 +13,7 @@ function LoginForm({Login, error}) {
 
     return (
         <form className="login" onSubmit={submitHandler}>
-            <div>
+            <div className="inner">
                 <h2>Login</h2>
                 {(error != "") ? ( <div className="error">{error}</div>) : ""}
                 <div className="form-group">
@@ -28,7 +28,7 @@ function LoginForm({Login, error}) {
                     <label htmlFor="password">Password:</label>
                     <TextField  variant="filled"  type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
                 </div>
-                <input type="submit" value="LOGIN"/>
+                <input className="button"type="submit" value="LOGIN"/>
             </div>
         </form>
     )
