@@ -12,25 +12,16 @@ code {
     monospace;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-  width: 1650px;
+.main {
+  margin-top: 10px;
 }
 
-.card {
-  padding: 2px 16px;
-  box-shadow: 0 0 3px rgba(190, 25, 25, 0.1);
-  outline: 5px solid black;
-  border: 1px solid black;
-  background-color: white;
-  width: 420px;
-  height: 610px;
-  margin: 20px;
-  flex-shrink: 5;
-  color: black;
+body {
+  background-color: rgb(18, 18, 18);
+}
+.Title {
+  color: white;
+}
+.login {
+  color: white;
 }
