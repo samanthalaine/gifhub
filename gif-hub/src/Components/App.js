@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react"
 import MainContent from "./MainContent"
 import Header from './Header'
+import Search from "./Search"
+import UploadGifs from "./UploadGifs"
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <Search/>
+      <UploadGifs/>
       <MainContent gif={gif}/>
     </div>
   );
