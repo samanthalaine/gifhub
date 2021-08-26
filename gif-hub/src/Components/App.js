@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from "react"
 import MainContent from "./MainContent"
 import Header from './Header'
-
+import Search from "./Search"
+import UploadGifs from "./UploadGifs"
 import Login from "./Login";
 import ItemDetail from "./ItemDetail"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-
-import Search from "./Search"
-import UploadGifs from "./UploadGifs"
 
 
 function App() {
@@ -31,7 +29,7 @@ function App() {
 //- Need 2 routes, one for sign up and one for log in.
 //Action item 2 - make sign up component.
 //Action item 3 - style sign up and login components
-//Action item 4 - click on image
+//Font Change, Nav bar-icons, search bar and images. upload and images., login style.
 
 
   return (
@@ -39,16 +37,22 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-        <Route path="/login" component={Login}/>
+        <Route path="/login" exact component={Login}/>
         <Route path="/" exact>
           <MainContent gif={gif}/>
         </Route>
-        <Route path="/:id">
+        <Route path="/gif/:id">
           <ItemDetail gif={gif}/>
         </Route>
+        <Route path="/search" exact>
+          <Search/> 
+        </Route>
+        <Route path="/upload"exact>
+          <UploadGifs/>
+        </Route>
       </Switch>
-      <Search/>
-      <UploadGifs/>
+      
+     
       
 
     </div>

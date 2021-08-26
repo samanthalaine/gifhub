@@ -1,9 +1,33 @@
 import React from 'react'
 import { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+import { ImageListItem } from "@material-ui/core";
+import { ImageList } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(315deg, #06bcfb 0%, #4884ee 74%)',
+    
+    
+    border: 0,
+    marginLeft: "10px",
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    '&:hover':{
+        background: "black"
+    }
+  }
+});
 
 function UploadGifs() {
-    const [gif, setGif] = useState('')
+  const classes = useStyles()
+  
+    const [gif, setGif] = useState([])
     const [loading, setLoading] = useState(false)
+    console.log(gif)
   
     const uploadImage = async e => {
       const files = e.target.files
@@ -19,13 +43,14 @@ function UploadGifs() {
         }
       )
       const file = await res.json()
+      console.log(gif)
   
-      setGif(file.secure_url)
+      setGif([...gif, file])
       setLoading(false)
     }
   
     return (
-      <div className="upload-gif">
+      <ImageList rowHeight="auto" className={classes.imageList}>
         <h1>Upload Gif</h1>
         
         <input
@@ -37,9 +62,15 @@ function UploadGifs() {
         {loading ? (
           <h3>Loading...</h3>
         ) : (
-          <img src={gif}  alt = 'gif' style={{ width: '300px' }} />
-        )}
-      </div>
+         
+        
+          gif.map((gif) => 
+        <ImageListItem >
+           <img src={gif.secure_url} />
+        </ImageListItem>  )
+          
+       )}
+      </ImageList>
     )
   }
 

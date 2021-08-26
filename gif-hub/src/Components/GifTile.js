@@ -1,8 +1,6 @@
 import React from "react"
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
 import { Link } from "react-router-dom";
 // import InfoIcon from '@material-ui/icons/Info';
 
@@ -17,7 +15,7 @@ function GifTile({gif, handleClick}){
         <ImageListItem key={gif.id}  onClick={handleClick}>
            
             <img src={gif.images.fixed_width.url} alt={gif.title} />
-            <Link to={gif.id}>
+            <Link to={`/gif/${gif.id}`}>
             <ImageListItemBar
               title={gif.title}
               subtitle={<span>by:{gif.username !== "" ? gif.username : "Unknown"}</span>}
@@ -39,7 +37,7 @@ export default GifTile;
 
 
 
-{/* <div className= "image">
+/* <div className= "image">
         <img src={gif.images.downsized_large.url}></img>
     </div>
     <div className="title">
@@ -47,4 +45,4 @@ export default GifTile;
     </div>
     <div className="rating">
         <p>{gif.rating}</p>
-    </div> */}
+    </div> */

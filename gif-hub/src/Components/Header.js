@@ -36,8 +36,12 @@ const Header = () => {
                 <Link to="/">
                     <Button className={classes.root}variant="contained" color="primary"type='home'>Home</Button>
                 </Link>
+                <Link to="/search">
                 <Button className={classes.root} variant="contained" color="primary"type='search'>Search</Button>
+                </Link>
+                <Link to="/upload">
                 <Button className={classes.root} variant="contained" color="primary"type='upload'>Upload Gif</Button>
+                </Link>
                 <Link to="/login">
                     <Button className={classes.root} variant="contained" color="primary"type='login'>Login</Button>
                 </Link>

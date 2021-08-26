@@ -2,7 +2,7 @@ import React from 'react'
 import GifTile from './GifTile'
 import { ImageList } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+
 
 function MainContent({gif, handleClick}) {
 

@@ -15,7 +15,7 @@ const Login = () => {
     const Login = details => {
         console.log(details)
 
-        if (details.email == userDetails.email && details.password == userDetails.password){
+        if (details.email === userDetails.email && details.password === userDetails.password){
             console.log("Logged in")
             setUser({
                 name: details.name,
@@ -41,7 +41,7 @@ const Login = () => {
 
     return (
         <div>
-            {(user.email != "") ? (
+            {(user.email !== "") ? (
                 <div>
                     <h2>Welcome, <span>{user.name}</span></h2>
                     <button onClick={Logout}>Logout</button>
