@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core';
 import React, {useState} from 'react'
 import LoginForm from './LoginForm';
 
@@ -42,9 +43,9 @@ const Login = () => {
     return (
         <div>
             {(user.email !== "") ? (
-                <div>
-                    <h2>Welcome, <span>{user.name}</span></h2>
-                    <button onClick={Logout}>Logout</button>
+                <div className="container">
+                    <Typography className="logout" variant="h1">Welcome, <span>{user.name}</span></Typography>
+                    <button className="button" onClick={Logout}>Logout</button>
                 </div>
             ) : (
                 <LoginForm Login={Login} error={error}  />

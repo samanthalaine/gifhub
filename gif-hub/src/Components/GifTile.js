@@ -2,17 +2,34 @@ import React from "react"
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/styles";
 // import InfoIcon from '@material-ui/icons/Info';
 
-
-
+const useStyles = makeStyles({
+    root: {
+      display: 'flex',
+      flexDirection: "row",
+      justifyContent: 'space-around',
+      overflow: 'hidden',
+    },
+    imageList: {
+      width: "auto",
+      height: "auto",
+      paddingLeft: '50px',
+    },
+    item:{
+      border: "5px solid #000000",
+      borderRadius: "2px",
+      margin: "10px 10px 10px 10px"
+    }})
 
 
 
 function GifTile({gif, handleClick}){
+    const classes = useStyles()
     // console.log(gif.user)
     return(
-        <ImageListItem key={gif.id}  onClick={handleClick}>
+        <ImageListItem className={classes.item} key={gif.id}  onClick={handleClick}>
            
             <img src={gif.images.fixed_width.url} alt={gif.title} />
             <Link to={`/gif/${gif.id}`}>

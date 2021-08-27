@@ -13,12 +13,12 @@ function MainContent({gif, handleClick}) {
           flexWrap: 'wrap',
           justifyContent: 'space-around',
           overflow: 'hidden',
-          backgroundColor: theme.palette.background.paper,
         },
         imageList: {
-          width: "auto",
-          height: "auto",
-          paddingLeft: '50px'
+          width: "500",
+          height: "450",
+          paddingLeft: '150px',
+          paddingTop: "30px"
         },
         icon: {
           color: 'rgba(255, 255, 255, 0.54)',
@@ -29,7 +29,7 @@ function MainContent({gif, handleClick}) {
     return (
         
         
-        <div className="main">
+        <div className={classes.root}>
             <ImageList rowHeight="auto" className={classes.imageList}>
             {
 
