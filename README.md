@@ -1,25 +1,24 @@
-# GifHub
-Phase 2 Project for Andres Gordillo and Samantha Laine
+# GameReview
+Phase 3 Project
 
-Project consists of creating a application that host a collection of gifs that users can interact with and add to. 
+Website:
+Title: GameReview Website
+Purpose: 
+User Story: 
 
-
-
-API = 
-
-Deliverables:
-
-- Ensure products appear on page
-- Login feature
-- Search and sort
-- Adding your own gif
-- Routing to different pages, such as home and login
-- Make it persist on page
-
-
-
-Stretch Goals:
-
-- Make it styled using material ui.
-- Create a smooth user experience, no bugs.
-
+What are you planning on building?
+GameReview Website
+What are your models?
+Game, Review, and User
+Include Relationships & Associations
+Game has many reviews, and users through reviews.
+User has many reviews, and games through reviews
+Game is left table, User is right, Review is middle with both foreign keys
+What are some of the features of your app?
+Be able to look, review and like each game and add comments.
+Create your own review.
+Navigate through different games, and consoles. 
+Sort by different rating, date, consoles.
+Click on each game card to expand info and review. 
+What do you think your biggest challenge is going to be?
+Routing/ Fetching endpoints. Connecting ruby to react. 
